@@ -1,0 +1,17 @@
+{
+  "name": "overtime-notes",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Offline Android overtime log with Chinese and English UI",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tests/core.test.js",
+    "test:ui": "node tests/ui.test.cjs && node tests/i18n.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1"
+  }
+}

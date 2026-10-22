@@ -1,0 +1,34 @@
+# All private signing material remains local.
+/signing/
+/.local-signing/
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+signing.json
+.env
+.env.*
+!.env.example
+# Build tools, outputs, dependencies, personal data, editor files.
+/.cache/
+/build/
+/toolchain/
+/node_modules/
+__pycache__/
+*.py[cod]
+*.apk
+*.aab
+*.idsig
+*.db
+*.db-*
+*.sqlite*
+*.csv
+*.log
+.DS_Store
+.idea/
+.vscode/
+
+# This prebuilt official release is intentionally public.
+!/downloads/overtime-notes-1.1.0.apk
