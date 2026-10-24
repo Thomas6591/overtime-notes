@@ -103,7 +103,7 @@ def main():
     env['OVERTIME_SIGN_STORE_PASSWORD'] = store_password
     env['OVERTIME_SIGN_KEY_PASSWORD'] = key_password
     suffix = '' if args.release else '-development'
-    output = BUILD / ('overtime-notes-1.1.0' + suffix + '.apk')
+    output = BUILD / ('overtime-notes-1.2.0' + suffix + '.apk')
     run('java', '-jar', bt / 'lib/apksigner.jar', 'sign', '--ks', key, '--ks-key-alias', alias, '--ks-pass', 'env:OVERTIME_SIGN_STORE_PASSWORD', '--key-pass', 'env:OVERTIME_SIGN_KEY_PASSWORD', '--v4-signing-enabled', 'false', '--out', output, BUILD / 'aligned.apk', env=env)
     run('java', '-jar', bt / 'lib/apksigner.jar', 'verify', '--verbose', output)
     print('Built:', output)

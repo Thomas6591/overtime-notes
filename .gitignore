@@ -32,3 +32,6 @@ __pycache__/
 
 # This prebuilt official release is intentionally public.
 !/downloads/overtime-notes-1.1.0.apk
+
+/build-final/
+!/downloads/overtime-notes-1.2.0.apk
