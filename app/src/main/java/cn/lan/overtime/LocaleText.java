@@ -27,6 +27,6 @@ public final class LocaleText {
  public String message(String language,String original){
   if(original==null)return text(language,"error.generic");
   String key=data.optJSONObject("messages").optString(original,"");
-  return key.isEmpty()?original:text(language,key);
+  return key.isEmpty()?text(language,original):text(language,key);
  }
 }

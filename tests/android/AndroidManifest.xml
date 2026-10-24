@@ -1,0 +1,1 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="cn.lan.overtime.tests"><uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35"/><application android:label="Overtime tests" android:debuggable="true"/><instrumentation android:name="cn.lan.overtime.StoreInstrumentation" android:targetPackage="cn.lan.overtime"/></manifest>
