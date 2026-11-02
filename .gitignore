@@ -35,3 +35,5 @@ __pycache__/
 
 /build-final/
 !/downloads/overtime-notes-1.2.0.apk
+
+!/downloads/overtime-notes-1.3.0.apk

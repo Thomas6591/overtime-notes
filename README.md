@@ -1,5 +1,16 @@
 # Overtime Notes
 
+## 1.3.0: settlement and data protection
+
+Adds configurable settlement periods, overnight allocation, original/credited minute details, reviewed-period locks, local missing-entry reminders, five recovery copies, import policies and period reports. Chart drilldown respects allocated dates and visible categories.
+
+- [1.3.0 APK](downloads/overtime-notes-1.3.0.apk)
+- [Upgrade and calculation rules (Chinese)](docs/UPGRADE-1.3.0.zh-CN.md)
+- [Validation record (Chinese)](docs/VALIDATION-1.3.0.zh-CN.md)
+
+Original entries and legacy defaults are preserved. The APK uses the existing signing identity for in-place updates. Export a separate backup before updating. Reminders can be delayed by battery restrictions. Durations use entered wall-clock times, without daylight-saving adjustments.
+
+
 English · [简体中文](README.zh-CN.md)
 
 An offline, bilingual Android app for tracking overtime. MIT licensed.

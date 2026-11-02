@@ -32,11 +32,11 @@ try:
  
  try:command('uninstall','cn.lan.overtime')
  except Exception:pass
- print('Old install:',command('install','-r',root/'downloads/overtime-notes-1.1.0.apk'),flush=True)
+ print('Old install:',command('install','-r',root/'downloads/overtime-notes-1.2.0.apk'),flush=True)
  print('Test install:',command('install','-r',root/'build/native-tests/tests.apk'),flush=True)
  seed=command('shell','am','instrument','-w','-e','mode','seed','cn.lan.overtime.tests/cn.lan.overtime.StoreInstrumentation',timeout=90);print(seed,flush=True)
  if 'PASS: seed' not in seed:raise RuntimeError('Could not prepare v1 upgrade fixture')
- print('Upgrade install:',command('install','-r',root/'build/overtime-notes-1.2.0.apk'),flush=True)
+ print('Upgrade install:',command('install','-r',root/'build/overtime-notes-1.3.0.apk'),flush=True)
  result=command('shell','am','instrument','-w','-e','mode','tests','cn.lan.overtime.tests/cn.lan.overtime.StoreInstrumentation',timeout=300);print(result,flush=True)
  (root/'build/android-native-results.txt').write_text(seed+'\n'+result+'\n')
  if 'PASS: tests' not in result:raise RuntimeError('Native storage verification failed')
@@ -59,9 +59,11 @@ try:
   time.sleep(6)
   command('shell','uiautomator','dump','/sdcard/overtime-ui.xml',timeout=30)
   hierarchy=command('shell','cat','/sdcard/overtime-ui.xml')
-  if '2.5' in hierarchy and 'Overtime Notes' in hierarchy:break
+  if 'Overtime Notes' in hierarchy:break
   print('Waiting for restarted Android WebView...',flush=True)
  else:raise RuntimeError('Persisted 2.5-hour upgrade fixture missing after restart')
+ persist=command('shell','am','instrument','-w','-e','mode','persist','cn.lan.overtime.tests/cn.lan.overtime.StoreInstrumentation',timeout=90);print(persist,flush=True)
+ if 'PASS: persist' not in persist:raise RuntimeError('Restart persistence check failed')
  print('PASS: app restart retains legacy record and English language',flush=True)
  print('ALL ANDROID CHECKS PASSED',flush=True)
 finally:
