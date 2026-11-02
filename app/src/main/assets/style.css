@@ -9,3 +9,9 @@
 /* Older Android WebViews support grid gaps but not flex gaps. */
 .brand{gap:0}.brand-icon{margin-right:.65rem}.hero-value{gap:0}.hero-value>span{margin-left:.6rem}.header-actions{gap:0}.header-actions>*+*{margin-left:.4rem}.record{gap:0}.record-content{margin-left:.7rem}.record-total{margin-left:.7rem}
 @media(max-width:360px){.record-content,.record-total{margin-left:.45rem}}
+
+
+/* Settlement and recovery controls */
+.calculation-detail{white-space:pre-line;padding:12px;font-size:.82rem;line-height:1.65;color:var(--muted);background:var(--bg);border-radius:12px;overflow-wrap:anywhere}.reminder-days{display:flex;flex-wrap:wrap;gap:12px;padding:12px 0}.reminder-days label{display:flex;align-items:center;gap:4px}.import-details{max-height:220px;overflow:auto;font-size:.85rem}.period-card .actions{display:flex;flex-wrap:wrap;gap:8px}.setting-row input[type=time]{min-width:0;max-width:130px}.manage-item p{overflow-wrap:anywhere}
+
+.calculation-detail{word-break:break-word}#backupDueBanner{border-top:1px solid var(--line);padding-top:.7rem;margin-top:.7rem}
